@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <%- include('./head.ejs') %>
+  </head>
+  <body>
+    <div class="container">
+      <h1><%=budget.name%></h1>
+      <button onclick="window.history.back()">Back</button>
+      <p>Date</p>
+      <h5><%=budget.date%></h5>
+      <p>Name</p>
+      <h5><%=budget.name%></h5>
+      <p>From</p>
+      <h5><%=budget.from%></h5>
+      <p>Amount</p>
+      <h5><%=budget.amount%></h5>
+      <p>Tags</p>
+      <h5><%=budget.tags%></h5>
+    </div>
+  </body>
+</html>

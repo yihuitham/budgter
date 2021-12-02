@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <%- include('./head.ejs') %>
+  </head>
+  <body>
+    <div class="container">
+    <h1>Budgtr</h1>
+    <h4 >Balance:</h4>
+    <h4 id="balance"><%=balance%> </h4>
+    <!-- <form action="/budgets/new" method="get"> -->
+        <a href="/budgets/new"><button>Add new budget</button></a>
+    <!-- </form> -->
+    <table>
+        <% for(i=0; i<budgets.length; i++) { %>
+        <tr>
+            <td><%=budgets[i].date%></td>
+            <td><a href="/budgets/<%=i%> "><%=budgets[i].name%></a> </td>
+            <td><%=budgets[i].amount%></td>
+        </tr>
+        <% } %>
+    </table>
+    </div>
+    <script>
+      const balance = document.getElementById('balance');
+      // balance.textContent=-10000
+      if (balance.textContent<0) {
+        balance.style.backgroundColor='#ff0040'
+      } else if (balance.textContent>1000) {
+        balance.style.backgroundColor='#00bfff'
+
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <%- include('./head.ejs') %>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Add New Budget</h1>
+      <form action="/budgets/new" method="POST">
+        <input type="date" name="date" placeholder="Date" />
+        <input type="text" name="name" placeholder="Name" />
+        <input type="text" name="from" placeholder="From" />
+        <input type="number" name="amount" placeholder="Amount" />
+        <input type="text" name="tags" placeholder="Tags" />
+        <div><input type="submit" value="Submit" /></div>
+      </form>
+    </div>
+  </body>
+</html>
